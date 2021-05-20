@@ -10,8 +10,8 @@ JS/React/Node/MySQL
 
 ## Back-end Librarys
 
-express/sequlize
+express/sequelize
 
 ## Screenshot
 
-![screen shot](./assets/images/screenshot.png)
+<!-- ![screen shot](./assets/images/screenshot.png) -->
