@@ -1,5 +1,7 @@
 const express = require("express");
 const path = require("path");
+const passport = require('passport');
+const mongoose = require('mongoose');
 const axios = require("axios");
 
 const app = express();
@@ -14,10 +16,12 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 
-// Connect to the Mongo DB
 const db = require("./models");
-const mongoose = require('mongoose');
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/lottotracker_db", { useNewUrlParser: true });
+require('./config/passport');
+
+// Connect to the Mongo DB
+
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/lottotracker", { useNewUrlParser: true });
 mongoose.connection.once('open',function(){
     console.log('Database connected Successfully');
 }).on('error',function(err){
@@ -25,6 +29,7 @@ mongoose.connection.once('open',function(){
 });
 
 // Define API routes here
+app.use(require('./routes'));
 
 // Send every other request to the React app
 // Define any API routes before this runs

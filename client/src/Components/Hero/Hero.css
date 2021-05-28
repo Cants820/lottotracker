@@ -1,0 +1,9 @@
+.splash {
+    background: radial-gradient(#485563, #29323c);
+    border-bottom: 3px solid #333;
+    border-top: 3px solid #333;
+    padding: 67px 0 27px 0;
+    text-shadow: 0px 1px 3px #333;
+    text-align: center;
+    color: #fff;
+}
