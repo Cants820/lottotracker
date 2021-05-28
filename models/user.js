@@ -2,11 +2,10 @@ const mongoose = require('mongoose');
 const uniqueValidator = require('mongoose-unique-validator');
 const crypto = require('crypto');
 const jwt = require('jsonwebtoken');
-const secret = 'random string';//require('../config').secret;
+const secret = require('../config').secret;
 const Schema = mongoose.Schema;
 
 const UserSchema = new Schema({
-  _id: { type: String },
   email: {type: String, lowercase: true, unique: true, required: [true, "can't be blank"], match: [/\S+@\S+\.\S+/, 'is invalid'], index: true},
   hash: { type: String },
   salt: String
