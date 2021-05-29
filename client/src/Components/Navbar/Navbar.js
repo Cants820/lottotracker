@@ -10,7 +10,7 @@ function Navbar(props) {
       <ul className="hold-right">
         <li className="item"><a href="/picks">picks</a></li>
         <li className="item"><a href="/groups">groups</a></li>
-        <li className="item"><a href="/settings">settings</a></li>
+        <li className="item"><a href="/profile">profile</a></li>
       </ul>
     </nav>
   );

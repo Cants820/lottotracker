@@ -41,6 +41,32 @@ UserSchema.methods.toAuthJSON = function(){
   };
 };
 
+UserSchema.methods.toProfileJSONFor = function(user){
+  return {
+    username: this.username,
+    avatar: this.avatar || 'https://static.productionready.io/images/smiley-cyrus.jpg',
+    following: user ? user.isFollowing(this._id) : false
+  };
+};
+
+UserSchema.methods.follow = function(id){
+  if(this.following.indexOf(id) === -1){
+    this.following.push(id);
+  }
+  return this.save();
+};
+
+UserSchema.methods.unfollow = function(id){
+  this.following.remove(id);
+  return this.save();
+};
+
+UserSchema.methods.isFollowing = function(id){
+  return this.following.some(function(followId){
+    return followId.toString() === id.toString();
+  });
+};
+
 const User = mongoose.model('User', UserSchema);
 
 module.exports = User;
