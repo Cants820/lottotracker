@@ -13,7 +13,7 @@ const Profile = () => {
         <div className="bg-secondary rounded-3 p-4 mb-4">
           <div className="d-block d-sm-flex align-items-center">
             <img className="d-block rounded-circle mx-sm-0 mx-auto mb-3 mb-sm-0" src="https://static.productionready.io/images/smiley-cyrus.jpg" alt="Amanda Wilson" width="110" />
-            <div class="ps-sm-3 text-center text-sm-start">
+            <div className="ps-sm-3 text-center text-sm-start">
               <button className="btn btn-light shadow btn-sm mb-2" type="button"><i className="ai-refresh-cw me-2"></i>Change avatar</button>
               <p className="p mb-0 fs-ms text-muted">Upload JPG, GIF or PNG image. 300 x 300 required.</p>
             </div>
@@ -23,50 +23,50 @@ const Profile = () => {
         <div className="row">
           <div className="col-sm-6">
             <div className="mb-3 pb-1">
-              <label className="form-label px-0" for="account-fn">First Name</label>
-              <input className="form-control" type="text" id="account-fn" />
+              <label className="form-label px-0">First Name</label>
+              <input className="form-control" type="text" />
             </div>
           </div>
 
           <div className="col-sm-6">
             <div className="mb-3 pb-1">
-              <label className="form-label px-0" for="account-ln">Last Name</label>
-              <input className="form-control" type="text" id="account-ln" />
+              <label className="form-label px-0">Last Name</label>
+              <input className="form-control" type="text" />
             </div>
           </div>
 
           <div className="col-sm-6">
             <div className="mb-3 pb-1">
-              <label className="form-label px-0" for="account-email">Email address</label>
-              <input className="form-control" type="text" id="account-email" />
+              <label className="form-label px-0">Email address</label>
+              <input className="form-control" type="text" />
             </div>
           </div>
 
           <div className="col-sm-6">
             <div className="mb-3 pb-1">
-              <label className="form-label px-0" for="account-username">Username</label>
-              <input className="form-control" type="text" id="account-username" />
-            </div>
-          </div>
-
-          <div className="col-sm-6">
-            <div class="mb-3 pb-1">
-              <label className="form-label px-0" for="account-city">City</label>
-              <input className="form-control" type="text" id="account-city" />
+              <label className="form-label px-0">Username</label>
+              <input className="form-control" type="text" />
             </div>
           </div>
 
           <div className="col-sm-6">
             <div className="mb-3 pb-1">
-              <label className="form-label px-0" for="account-address">Address</label>
-              <input className="form-control" type="text" id="account-address" />
+              <label className="form-label px-0">City</label>
+              <input className="form-control" type="text" />
             </div>
           </div>
 
           <div className="col-sm-6">
             <div className="mb-3 pb-1">
-              <label className="form-label px-0" for="account-zip">ZIP Code</label>
-              <input className="form-control" type="text" id="account-zip" />
+              <label className="form-label px-0">Address</label>
+              <input className="form-control" type="text" />
+            </div>
+          </div>
+
+          <div className="col-sm-6">
+            <div className="mb-3 pb-1">
+              <label className="form-label px-0">ZIP Code</label>
+              <input className="form-control" type="text" />
             </div>
           </div>
 

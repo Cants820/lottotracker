@@ -28,6 +28,11 @@ mongoose.connection.once('open',function(){
     console.log('Database connection Error', err);
 });
 
+// need to fetch latest result from db, OR from external api then save result to db
+// extrernal api example: https://www.calottery.com/api/DrawGameApi/DrawGamePastDrawResults/8/1/20
+// params: 8 = supperlotto, 1 = page one results, 20 = # of results per page
+
+
 // Define API routes here
 app.use(require('./routes'));
 

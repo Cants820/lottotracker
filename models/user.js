@@ -4,12 +4,14 @@ const crypto = require('crypto');
 const jwt = require('jsonwebtoken');
 const secret = require('../config').secret;
 const Schema = mongoose.Schema;
+const Profile = mongoose.Schema({email:String});
 
 const UserSchema = new Schema({
-  email: {type: String, lowercase: true, unique: true, required: [true, "can't be blank"], match: [/\S+@\S+\.\S+/, 'is invalid'], index: true},
+  email: {type: Schema.Types.ObjectId, ref: 'Profile', type: String, lowercase: true, unique: true, required: [true, "can't be blank"], match: [/\S+@\S+\.\S+/, 'is invalid'], index: true},
   hash: { type: String },
   salt: String
 },{timestamps: true});
+
 
 UserSchema.plugin(uniqueValidator, {message: 'is already taken.'});
 

@@ -1,0 +1,36 @@
+ol {
+	clear: both;
+	list-style: none;
+	margin: 0 auto;
+	padding: 0;
+}
+ol li {
+	box-shadow: 0px 7px 10px rgba(0,0,0,0.25);
+	width: 15%;
+	background: radial-gradient(circle at top right, #FFF, #999);
+	padding-top: 15%;
+	display: inline-block;
+	border-radius: 50%;
+	line-height: 0;
+	margin: 0 1.4% 0.75% 0.5%;
+	position: relative;
+}
+ol li:last-child {
+	margin: 0 0 0.75% 0.5%;
+}
+ol li ins {
+	color: #333;
+	display: block;
+	text-align: center;
+	position: absolute;
+	top: 50%;
+	width: 100%;
+	text-decoration: none;
+	font-family: 'Francois One', sans-serif;
+	font-size: 130%;
+	font-weight: 600;
+	opacity: 0.8;
+}
+ol li:last-child ins {
+	color: #138;
+}
